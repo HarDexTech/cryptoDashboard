@@ -1,0 +1,115 @@
+/* CSS Boilerplate */
+:root {
+  --bgColor: #e5e5e5;
+  --text: #000000;
+  --peripherals: #fca311;
+  --btn: #14213d;
+  --transitions: 0.3s ease-in-out;
+  --borderRadius: calc(infinity * 1px);
+  --defWidth: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+#exchangeContainer {
+  flex-direction: row;
+  gap: 30px;
+}
+.contain {
+  background: #fca311;
+  width: calc(100vw - 250px);
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  border-radius: 30px;
+}
+nav {
+  background: var(--peripherals);
+  color: var(--text);
+  font-size: 20px;
+  display: flex;
+  padding-left: 20px;
+  gap: 30px;
+  align-items: center;
+}
+section {
+  width: 100%;
+  height: 100dvh;
+}
+p {
+  font-size: 16px;
+}
+#logo {
+  background-color: var(--btn);
+  width: fit-content;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+path {
+  color: var(--bgColor);
+}
+input:focus,
+button:focus {
+  outline: none;
+}
+button {
+  cursor: pointer;
+  width: var(--defWidth);
+  height: 50px;
+  border: none;
+  border-radius: var(--borderRadius);
+  transition: var(--transitions);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+button:hover {
+  filter: opacity(0.7);
+  transform: scale(1.05);
+}
+button:active {
+  transform: scale(0.9);
+}
+input {
+  padding: calc(var(--defWidth) / 10);
+  border: none;
+  border-radius: var(--borderRadius);
+  height: 50px;
+  font-size: 18px;
+  transition: var(--transitions);
+  background: var(--btn);
+}
+h1 {
+  font-size: 40px;
+}
+.textContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  gap: 4%;
+}
+form div {
+  display: flex;
+  flex-direction: column;
+}
