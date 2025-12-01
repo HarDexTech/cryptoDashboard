@@ -12,18 +12,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: var(--bgColor);
 }
 body {
+  background: var(--btn);
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   font-family: Arial, sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
-}
-#exchangeContainer {
-  flex-direction: row;
-  gap: 30px;
 }
 .contain {
   background: #fca311;
@@ -32,6 +31,9 @@ body {
   align-items: center;
   gap: 30px;
   border-radius: 30px;
+  padding: 20px;
+  height: calc(100vh - 220px);
+  justify-content: center;
 }
 nav {
   background: var(--peripherals);
@@ -48,6 +50,9 @@ section {
 }
 p {
   font-size: 16px;
+}
+.info-p {
+  color: var(--btn);
 }
 #logo {
   background-color: var(--btn);
@@ -79,8 +84,12 @@ form {
   gap: 20px;
 }
 button:hover {
-  filter: opacity(0.7);
+  filter: opacity(0.8);
   transform: scale(1.05);
+}
+#tokenContainer,
+#compareBtnContainer {
+  width: calc(100vw / 4);
 }
 button:active {
   transform: scale(0.9);
@@ -103,13 +112,38 @@ h1 {
   justify-content: center;
   flex-direction: column;
 }
-
-#home {
-  display: flex;
-  flex-direction: column;
-  gap: 4%;
-}
 form div {
   display: flex;
   flex-direction: column;
+}
+label,
+button {
+  color: var(--text);
+  font-size: 16px;
+}
+.exchangeContainer {
+  background: var(--peripherals);
+  width: 25vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 20vh;
+  flex-direction: column;
+  flex-grow: 1;
+}
+#output {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-flow: row wrap;
+}
+#result {
+  display: grid;
+  place-items: center;
+}
+.invisible {
+  display: none !important;
 }

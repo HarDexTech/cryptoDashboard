@@ -47,41 +47,31 @@
               <label for="tokenInput">Token Symbol</label>
               <input
                 type="text"
+                list="tradingPairs"
                 id="tokenInput"
                 placeholder="e.g., SOL, BTC, ETH"
                 required
               />
-            </div>
-
-            <div id="blockChainContainer">
-              <label for="blockChainInput">Enter BlockChain</label>
+              <label for="tradingPairInput">Trading Pairs</label>
               <input
                 type="text"
-                id="blockChainInput"
-                placeholder="Enter BlockChain"
+                list="tradingPairs"
+                id="tradingPairInput"
+                placeholder="e.g., USDT, ETH, XRP"
                 required
               />
-            </div>
-
-            <div id="exchangeContainer">
-              <div id="exchange1">
-                <label for="exchange1input">Exchange 1</label>
-                <input
-                  type="text"
-                  id="exchange1input"
-                  placeholder="e.g., Binance, Raydium"
-                  required
-                />
-              </div>
-              <div id="exchange2">
-                <label for="exchange2input">Exchange 2</label>
-                <input
-                  type="text"
-                  id="exchange2input"
-                  placeholder="e.g., Kraken, Coinbase"
-                  required
-                />
-              </div>
+              <datalist id="tradingPairs">
+                <option value="BTC"></option>
+                <option value="ETH"></option>
+                <option value="SOL"></option>
+                <option value="XRP"></option>
+                <option value="USDT"></option>
+                <option value="DOGE"></option>
+                <option value="DOT"></option>
+                <option value="MATIC"></option>
+                <option value="LTC"></option>
+                <option value="BCH"></option>
+              </datalist>
             </div>
 
             <div id="compareBtnContainer">
@@ -91,5 +81,14 @@
         </form>
       </div>
     </section>
+
+    <section id="result">
+      <div id="output">
+        <div id="binanceContainer" class="exchangeContainer"></div>
+        <div id="bybitContainer" class="exchangeContainer"></div>
+        <div id="kucoinContainer" class="exchangeContainer"></div>
+      </div>
+    </section>
   </body>
+  <script src="script.js"></script>
 </html>
